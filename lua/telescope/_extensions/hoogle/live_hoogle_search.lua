@@ -123,11 +123,12 @@ local function live_hoogle_search(opts)
         copy_to_clipboard(entry.type_sig)
         actions.close(buf)
       end)
-      map('i', '<C-b>', function()
+      map('i', '<CR>', function()
         local entry = actions_state.get_selected_entry()
         open_browser(entry.url)
         actions.close(buf)
       end)
+
 
       return true
     end
